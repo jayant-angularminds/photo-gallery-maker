@@ -1,0 +1,27 @@
+.gridWrap {
+    background-color: rgb(212, 215, 214);
+    padding: 0px 105px !important;
+
+    .gridTextWrap {
+        margin-top: 110px;
+        .title {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #101828;
+        }
+
+        .subTitle {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: #667085;
+        }
+    }
+}
