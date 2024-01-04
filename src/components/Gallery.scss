@@ -28,15 +28,34 @@
 
     .cellsWrap {
         padding: 0px 12px;
-        background-image: repeating-linear-gradient(120deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px), 
-                          repeating-linear-gradient(210deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px), 
-                          repeating-linear-gradient(-60deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px), 
-                          repeating-linear-gradient(30deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px);
+        background-image: repeating-linear-gradient(120deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px),
+            repeating-linear-gradient(210deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px),
+            repeating-linear-gradient(-60deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px),
+            repeating-linear-gradient(30deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px);
         background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
         background-position: 0 0, 0 0, 100% 0, 0 100%;
         background-repeat: no-repeat;
         border-radius: 5px;
 
+        .gridRow {
+            background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(30deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 98% 1px;
+            background-position: 0 0, 0 0, 100% 12px, 12px 100%;
+            background-repeat: no-repeat;
+        }
+
+        .gridRow:last-child {
+            background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 98% 1px;
+            background-position: 0 0, 0 0, 100% 12px, 12px 100%;
+            background-repeat: no-repeat;
+        }
 
 
         //---------- Small Col Cell -----------
@@ -45,8 +64,8 @@
             background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
                 repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
                 repeating-linear-gradient(-60deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px),
-                repeating-linear-gradient(30deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px);
-                background-size: 0px 100%, 100% 1px, 1px 87%, 100% 1px;
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 100% 1px;
             background-position: 0 0, 0 0, 100% 12px, 0 100%;
             background-repeat: no-repeat;
 
@@ -69,6 +88,7 @@
                         height: 100%;
                         width: 100%;
                         border-radius: 12px;
+                        object-fit: cover;
                     }
 
                     .overlay {
@@ -91,12 +111,24 @@
                             align-items: center;
                             margin-right: unset;
                             margin-left: unset;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-right: unset;
+                            color: white;
 
-                            .hoverIconsWrap {
+                            .arw-iconLeft {
                                 display: flex;
-                                justify-content: space-between;
-                                padding-right: unset;
-                                color: white;
+                                justify-content: left;
+                            }
+
+                            .delete-icon {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            .arw-iconRight {
+                                display: flex;
+                                justify-content: end;
                             }
                         }
 
@@ -146,12 +178,26 @@
             }
         }
 
-
+        .smallCol:last-child {
+            background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 100% 1px;
+            background-position: 0 0, 0 0, 100% 12px, 0 100%;
+            background-repeat: no-repeat;
+        }
 
         //---------- Large Col Cell -----------    
         .largeCol {
             padding: 12px;
-            border: 1.5px dashed #c2c2c2;
+            background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(-60deg, #cacdd5, #cacdd5 3px, transparent 0px, transparent 5px, #cacdd5 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 100% 1px;
+            background-position: 0 0, 0 0, 100% 12px, 0 100%;
+            background-repeat: no-repeat;
 
             .picWrap {
                 height: 180px;
@@ -172,6 +218,7 @@
                         height: 100%;
                         width: 100%;
                         border-radius: 12px;
+                        object-fit: cover;
                     }
 
                     .overlay {
@@ -194,13 +241,25 @@
                             align-items: center;
                             margin-right: unset;
                             margin-left: unset;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-right: unset;
+                            padding-left: unset;
+                            color: white;
 
-                            .hoverIconsWrap {
+                            .arw-iconLeft {
                                 display: flex;
-                                justify-content: space-between;
-                                padding-right: unset;
-                                padding-left: 32px;
-                                color: white;
+                                justify-content: left;
+                            }
+
+                            .delete-icon {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            .arw-iconRight {
+                                display: flex;
+                                justify-content: end;
                             }
                         }
 
@@ -211,6 +270,16 @@
                     display: block;
                 }
             }
+        }
+
+        .largeCol:last-child {
+            background-image: repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px),
+                repeating-linear-gradient(0deg, #ffffff00, #ffffff00 0px);
+            background-size: 0px 100%, 100% 1px, 1px 87%, 100% 1px;
+            background-position: 0 0, 0 0, 100% 12px, 0 100%;
+            background-repeat: no-repeat;
         }
     }
 }

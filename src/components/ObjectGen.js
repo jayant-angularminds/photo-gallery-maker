@@ -4,7 +4,6 @@ const ObjectGen = {
 
         while (index < count) {
             tempObj.push({
-                id: index,
                 size: "small",
                 pic: null,
             })
